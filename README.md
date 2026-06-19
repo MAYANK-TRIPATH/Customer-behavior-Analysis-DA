@@ -1,42 +1,45 @@
-# Customer Trends & Revenue Analysis
+# Customer Shopping Behavior Analysis
 
 ## DashBoard
 <img width="854" height="499" alt="Dashboard" src="https://github.com/user-attachments/assets/fcd711d8-6af7-4621-9668-b2e5ef2b166a" />
 
-
 ## Overview
 
-This project focuses on analyzing customer purchasing behavior and revenue trends using retail transaction data.
+This project focuses on analyzing customer shopping behavior using retail transaction data to understand what drives purchasing decisions and revenue.
 
-The goal was to move beyond basic analysis and understand:
+The aim was not just to explore data, but to answer a practical business question:
 
-* What drives customer spending
-* Which segments contribute most to revenue
-* How purchasing patterns vary across customers
-
-The project follows a practical approach similar to real-world analytics work — from data cleaning to insight generation and visualization.
+**How can a retail company use customer data to improve sales, engagement, and long-term loyalty?**
 
 ---
 
-## Business Objective
+## Business Problem
 
-The analysis was aimed at answering key business questions:
+A retail company observed changing patterns in how customers shop across:
 
-* What are the main drivers of revenue?
-* Which customer segments contribute the most?
-* How do customers behave across different product categories?
-* Are there identifiable patterns in purchasing behavior?
-* How can the business improve revenue and customer retention?
+* Product categories
+* Demographics
+* Discounts and promotions
+* Online vs offline behavior
+
+The company wanted to understand:
+
+* What factors influence customer purchases
+* Which customers contribute the most to revenue
+* How to improve repeat purchases and engagement
 
 ---
 
-## Data Used
+## Data Summary
 
-The dataset represents retail customer transactions and includes:
+* ~3,900 transactions
+* 18 features
 
-* Customer-level information
-* Transaction details (amount, category, frequency)
-* Product/category-level data
+Key data includes:
+
+* Customer details (age, gender, location, subscription status)
+* Purchase behavior (category, amount, season, frequency)
+* Engagement factors (discounts, reviews, shipping type)
 
 ---
 
@@ -44,64 +47,83 @@ The dataset represents retail customer transactions and includes:
 
 ### 1. Data Preparation (Python)
 
-* Cleaned and transformed raw data using Pandas
-* Handled missing values and inconsistent formats
-* Prepared structured dataset for analysis
+* Cleaned and structured the dataset using Pandas
+* Handled missing values in review ratings using category-wise median
+* Standardized column names
+* Created new features:
+
+  * Age groups
+  * Purchase frequency
+* Removed redundant columns (promo code vs discount)
 
 ---
 
 ### 2. Data Analysis (SQL)
 
-Used SQL to answer business-driven questions:
+Used SQL to answer real business questions such as:
 
-* Customer segmentation based on spending
-* Revenue contribution by different groups
-* Category-wise sales performance
-* Transaction patterns and frequency analysis
+* Revenue contribution by gender
+* Impact of discounts on high-spending customers
+* Top-rated and best-performing products
+* Spending behavior across shipping types
+* Subscribers vs non-subscribers comparison
+* Customer segmentation (New, Returning, Loyal)
+* Revenue distribution across age groups
+* Repeat purchase behavior and subscription trends
 
 ---
 
 ### 3. Visualization (Power BI)
 
-Built an interactive dashboard to present:
+Built a dashboard to highlight:
 
-* Revenue trends and KPIs
-* Customer segmentation
-* Category-level performance
-* Key behavioral patterns
+* Revenue distribution
+* Customer segments
+* Product performance
+* Behavioral patterns
 
 ---
 
 ## Key Insights
 
-* Revenue is concentrated among a smaller group of high-value customers
-* Certain product categories contribute disproportionately to total revenue
-* Customer purchasing behavior shows repeat patterns across segments
-* Medium and high engagement customers drive most of the business value
-* Opportunities exist to improve retention among low-engagement customers
+* A small group of repeat customers contributes a large portion of revenue
+* Discounts drive purchases but are also linked with high-spending customers
+* Certain products consistently receive higher ratings and should be promoted
+* Subscribers show better engagement and spending patterns
+* Customers with higher purchase frequency are more likely to convert into loyal users
+* Age groups contribute differently to revenue, enabling targeted strategies
 
 ---
 
 ## Business Recommendations
 
-* Focus on high-value customers through targeted offers and loyalty programs
-* Improve visibility and promotion of top-performing categories
-* Increase engagement for low-activity users through campaigns and incentives
-* Use segmentation to personalize marketing strategies
+* Promote subscription plans to improve repeat purchases
+* Build loyalty programs to convert returning customers into loyal customers
+* Optimize discount strategy to balance revenue and margins
+* Highlight top-rated and high-performing products in marketing campaigns
+* Use targeted marketing based on age group and purchase behavior
 
 ---
 
 ## Tools Used
 
 * Python (Pandas)
-* SQL
+* SQL (PostgreSQL)
 * Power BI
 
 ---
 
 ## What This Project Demonstrates
 
-* Ability to work with real-world structured data
-* Strong understanding of SQL-based analysis
-* Experience in translating data into business insights
-* Capability to build dashboards for decision-making
+* Ability to work with structured retail data
+* Strong SQL-based business analysis
+* Understanding of customer segmentation and behavior
+* Translating data into actionable business insights
+
+---
+
+## Final Note
+
+This project focuses on practical business analysis rather than complex modeling, reflecting how real-world data analysts approach customer behavior problems.
+
+
